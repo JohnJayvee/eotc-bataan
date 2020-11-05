@@ -42,7 +42,7 @@
               <p class="text-title fw-600 m-0">Status: <span class="badge  badge-{{Helper::status_badge($transaction->transaction_status)}} p-2">{{Str::title($transaction->transaction_status)}}</span></p>
               <p class="fw-600 m-0" style="color: #DC3C3B;">Processing Fee: Php {{Helper::money_format($transaction->processing_fee)}} [{{$transaction->processing_fee_code}}]</p>
               <p class="text-title fw-600 m-0">Payment Status: <span class="badge badge-sm badge-{{Helper::status_badge($transaction->payment_status)}} p-2">{{Str::title($transaction->payment_status)}}</span></p>
-              <p class="fw-600 m-0" style="color: #DC3C3B;">Partial Amount: Php {{Helper::money_format($transaction->partial_amount)}}</p>
+             <!--  <p class="fw-600 m-0" style="color: #DC3C3B;">Partial Amount: Php {{Helper::money_format($transaction->partial_amount)}}</p> -->
             </div>
             <div class="col-md-6 mt-4">
               <p class="text-title fw-600 m-0">Application Details:</span></p>

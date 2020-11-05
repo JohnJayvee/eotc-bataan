@@ -351,7 +351,7 @@ class CustomerTransactionController extends Controller
 			return redirect()->route('web.main.index');
 		}
 
-		$this->data['transaction_requirements'] = TransactionRequirements::where('transaction_id',$transaction->id)->where('status',"DECLINED")->groupBy('requirements_id')->get();
+		$this->data['transaction_requirements'] = TransactionRequirements::where('transaction_id',$transaction->id)->where('status',"DECLINED")->groupBy('requirement_id')->get();
 
 		$this->data['transaction'] = $transaction;
 										

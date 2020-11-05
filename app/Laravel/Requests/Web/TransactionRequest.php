@@ -18,7 +18,7 @@ class TransactionRequest extends RequestManager{
 			'contact_number' => "required",
 			'department_id' => "required",
 			'processing_fee' => "required",
-			'partial_amount' => "nullable|minimum_amount:application_id,partial_amount",
+			//'partial_amount' => "nullable|minimum_amount:application_id,partial_amount",
 			// 'regional_id' => "required",
 			'contact_number' => "required|max:10|phone:PH",
 		];

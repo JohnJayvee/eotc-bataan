@@ -451,11 +451,11 @@ class TransactionController extends Controller{
 					return redirect()->route('system.transaction.show',[$transaction->id]);
 
 				}
-				if ($request->get('amount') < $application->partial_amount ?: 0) {
+				/*if ($request->get('amount') < $application->partial_amount ?: 0) {
 					session()->flash('notification-status', "failed");
 					session()->flash('notification-msg', "Sorry, the amount should be not greater than the set partial amount.");
 					return redirect()->route('system.transaction.show',[$transaction->id]);
-				}
+				}*/
 				$requirements = TransactionRequirements::where('transaction_id',$transaction->id)->where('status',"pending")->update(['status' => "APPROVED"]);
 				$insert[] = [
 	            	'contact_number' => $transaction->contact_number,

@@ -115,7 +115,7 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-6 col-lg-6">
+                        <!-- <div class="col-sm-12 col-md-6 col-lg-6">
                             <div class="form-group">
                                 <label for="exampleInputEmail1" class="text-form pb-2">Partial Amount</label>
                                 <div class="input-group mb-3">
@@ -128,7 +128,7 @@
                                     <small class="form-text pl-1" style="color:red;">{{$errors->first('partial_amount')}}</small>
                                 @endif
                             </div>
-                        </div>
+                        </div> -->
                        
                     </div>
                    <input type="hidden" name="requirements_id" id="requirements_id_containter">
@@ -294,12 +294,12 @@ $(document).ready(function() {
         $.getJSON('/amount?type_id='+application_id, function(result){
             amount = parseFloat(result.data[0])
             partial_amount = parseFloat(result.data[1])
-            if (partial_amount > 0) {
+            /*if (partial_amount > 0) {
                 $('#input_partial_amount').prop("readonly" ,false);
             }else{
                 $('#input_partial_amount').val('');
                 $('#input_partial_amount').prop("readonly" ,true);
-            }
+            }*/
             $('#input_processing_fee').val(formatNumber(amount));
         });
         // return result;

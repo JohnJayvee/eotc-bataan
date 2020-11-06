@@ -160,7 +160,8 @@ class ReportController extends Controller
 				})
 				->where(function($query){
 					if(strlen($this->data['resent']) > 0){
-						return $query->where('is_resent',$this->data['resent']);
+						return $query->where('is_resent',$this->data['resent'])
+									->where('status',"PENDING");
 					}
 				})
 				->where(function($query){
@@ -232,7 +233,8 @@ class ReportController extends Controller
 				})
 				->where(function($query){
 					if(strlen($this->data['resent']) > 0){
-						return $query->where('is_resent',$this->data['resent']);
+						return $query->where('is_resent',$this->data['resent'])
+									->where('status',"PENDING");
 					}
 				})
 				->where(function($query){
